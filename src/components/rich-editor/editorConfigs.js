@@ -1,15 +1,31 @@
-export const baseToolBars = [
+export const baseToolPlugins = [
   'print preview searchreplace autolink directionality visualblocks visualchars fullscreen image link media template code codesample table charmap hr pagebreak nonbreaking anchor insertdatetime advlist lists wordcount imagetools textpattern help emoticons autosave autoresize',
   'powerpaste',
   'importword',
 ];
 
+const toolbas = [
+  'code undo redo restoredraft ',
+  ' cut copy paste pastetext ',
+  ' forecolor backcolor bold italic underline strikethrough link anchor ',
+  ' alignleft aligncenter alignright alignjustify outdent indent ',
+  'styleselect formatselect fontselect fontsizeselect ',
+  ' bullist numlist | blockquote subscript superscript removeformat ',
+  'table image media charmap emoticons hr pagebreak insertdatetime print preview ',
+  ' fullscreen ',
+  ' lineheight formatpainter importword',
+];
+
+/**
+ * 具体富文本的配置请参考
+ * http://tinymce.ax-z.cn/demos/demo-index.php
+ */
 export const configs = {
   language: 'zh_CN', // 需要在官网自己下载一个全局的langs包。同时我提供的powerpaste本身自带一个langs包里面含中文，所以可以100%支持中文。
   plugins: [
     'print preview searchreplace autolink directionality visualblocks visualchars fullscreen image link media template code codesample table charmap hr pagebreak nonbreaking anchor insertdatetime advlist lists wordcount imagetools textpattern help emoticons autosave autoresize',
-    'powerpaste',
-    'importword',
+    'importword', // word导入
+    'powerpaste', // 图文粘贴（此功能作为word导入的补充）
   ],
   height: 650, // 编辑器高度
   min_height: 400,
@@ -25,11 +41,7 @@ export const configs = {
       items: 'alignleft aligncenter alignright alignjustify',
     },
   },
-  toolbar:
-    // eslint-disable-next-line no-multi-str
-    'code undo redo restoredraft | cut copy paste pastetext | forecolor backcolor bold italic underline strikethrough link anchor | alignleft aligncenter alignright alignjustify outdent indent | \
-styleselect formatselect fontselect fontsizeselect | bullist numlist | blockquote subscript superscript removeformat | \
-table image media charmap emoticons hr pagebreak insertdatetime print preview | fullscreen | lineheight formatpainter',
+  toolbar: toolbas.join('|'),
   external_plugins: {
     powerpaste: '/static/js/tinymce5/plugins/powerpaste/plugin.min.js',
   },

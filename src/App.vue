@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">原生实现</router-link> |
+      <router-link to="/about">esm组件化实现</router-link>
     </div>
     <router-view/>
   </div>

@@ -7,8 +7,12 @@
 </template>
 
 <script>
-// 富文本(base on tinymce_V5)
-// 原生js版本实现
+/**
+ * 富文本(base on tinymce_V5)
+ * 原生js版本实现
+ * 参考文档：http://tinymce.ax-z.cn/
+ * 查阅demo4了解更多使用方法
+ */
 import { configs } from './editorConfigs';
 
 export default {
