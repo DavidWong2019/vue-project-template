@@ -1,14 +1,17 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <SampleVanilla />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import SampleVanilla from '@/components/rich-editor/SampleVanilla.vue';
 
 export default {
   name: 'Home',
-  components: {},
+  components: {
+    SampleVanilla,
+  },
 };
 </script>
