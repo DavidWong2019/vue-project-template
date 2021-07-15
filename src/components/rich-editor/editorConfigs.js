@@ -13,7 +13,7 @@ const toolbas = [
   ' bullist numlist | blockquote subscript superscript removeformat ',
   'table image media charmap emoticons hr pagebreak insertdatetime print preview ',
   ' fullscreen ',
-  ' lineheight formatpainter importword',
+  ' lineheight formatpainter',
 ];
 
 /**
@@ -41,7 +41,7 @@ export const configs = {
       items: 'alignleft aligncenter alignright alignjustify',
     },
   },
-  toolbar: toolbas.join('|'),
+  toolbar: [toolbas.join('|'), 'importword'],
   external_plugins: {
     powerpaste: '/static/js/tinymce5/plugins/powerpaste/plugin.min.js',
   },
