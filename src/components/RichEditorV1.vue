@@ -28,7 +28,7 @@ export default {
   styleselect formatselect fontselect fontsizeselect | bullist numlist | blockquote subscript superscript removeformat | \
   table image media charmap emoticons hr pagebreak insertdatetime print preview | fullscreen | lineheight formatpainter',
       external_plugins: {
-        powerpaste: '/static/js/tinymce/plugins/powerpaste/plugin.min.js',
+        powerpaste: '/static/js/tinymce5/plugins/powerpaste/plugin.min.js',
       },
       height: 650, // 编辑器高度
       min_height: 400,
